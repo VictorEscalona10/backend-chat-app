@@ -15,7 +15,7 @@ export class User {
     birthdate: Date;
 
     @Column({ nullable: true, type: 'varchar' })
-    verificationCode: string | null; // Especifica que puede ser null
+    verificationCode: string | null;
 
     @Column({ type: 'datetime', nullable: true })
     verificationCodeExpires: Date | null;
@@ -32,6 +32,12 @@ export class User {
     @Column({ default: true })
     isActive: boolean;
 
+    @Column({ nullable: true, type: 'varchar' })
+    loginCode: string | null;
+
+    @Column({ type: 'datetime', nullable: true })
+    loginCodeExpires: Date | null;
+    
     @CreateDateColumn({ type: 'datetime' }) 
     createdAt: Date; 
     
