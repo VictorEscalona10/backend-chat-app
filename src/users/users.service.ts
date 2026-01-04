@@ -8,7 +8,8 @@ export class UsersService {
     constructor(@InjectRepository(User) private usersRepository: Repository<User>) { }
 
     async findUserByEmail(email: string) {
-        const findUser = await this.usersRepository.findOne({ where: { email } })
+
+        const findUser = await this.usersRepository.findOne({ where: { email: email.toLowerCase() } })
 
         if(!findUser) throw new NotFoundException('El usuario no existe')
 
