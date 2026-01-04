@@ -6,6 +6,7 @@ import { ChatModule } from './chat/chat.module';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
 import { ConfigModule } from '@nestjs/config';
+import { ContactsModule } from './contacts/contacts.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { ConfigModule } from '@nestjs/config';
     ChatModule,
     UsersModule,
     AuthModule,
+    ContactsModule,
   ],
 
   controllers: [AppController],
