@@ -21,4 +21,8 @@ export class ChatService {
 
         return this.chatRepository.save(createChat)
     }
+
+    async getChatById(chat_id: string) {
+        return this.chatRepository.findOne({ where: { chat_id } });
+    }
 }

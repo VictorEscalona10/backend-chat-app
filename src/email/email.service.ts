@@ -63,7 +63,6 @@ export class EmailService {
     return this.transporter.sendMail(mailOptions);
   }
 
-  // Método genérico para enviar correos (opcional, por si necesitas más flexibilidad)
   private async sendEmail(to: string, subject: string, html: string, text?: string) {
     const mailOptions = {
       from: process.env.EMAIL_FROM,
